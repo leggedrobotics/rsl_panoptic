@@ -1,0 +1,18 @@
+<launch>
+    <!-- Loading Parameters -->
+    <rosparam file="$(find panoptic_ros)/config/config.yaml" command="load"/>
+
+    <arg name="image_topic" default="/camMainView/image_raw/compressed"/>
+    <arg name="compressed_image" default="true"/>
+    <!-- Slow down the rate of the image subscriber -->
+    <arg name="show_labels" default="false"/>
+    <arg name="show_segmentation" default="true"/>
+
+    <param name="image_topic" value="$(arg image_topic)"/>
+    <param name="compressed_image" value="$(arg compressed_image)"/>
+    <param name="show_labels" value="$(arg show_labels)"/>
+    <param name="show_segmentation" value="$(arg show_segmentation)"/>
+
+    <!-- Launch Estimator Node -->
+    <node name="panoptic_estimator_node" pkg="panoptic_ros" type="estimator_node.py" output="screen"/>
+</launch>

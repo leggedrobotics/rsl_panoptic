@@ -1,0 +1,14 @@
+net: "Mask2Former" # Options: "DETR", "Mask2Former"
+
+topics:
+  subscribe:
+    lidar_topic: "/os_node/lidar_packets"
+    cloud_topid: "/os_cloud_node/points"
+  publish:
+    pc2_topic: "/lidar_points"
+    seg_topic_mask: "/src/mask"
+    seg_topic_image: "/src/image"
+    seg_topic_lidar: "/src/masked_lidar_points"
+
+panoptic_deeplab:
+  adaptation: False

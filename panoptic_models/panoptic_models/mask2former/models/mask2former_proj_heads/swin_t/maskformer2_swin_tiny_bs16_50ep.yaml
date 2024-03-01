@@ -1,0 +1,15 @@
+_BASE_: ../maskformer2_R50_bs16_50ep.yaml
+MODEL:
+  BACKBONE:
+    NAME: "D2SwinTransformer"
+  SWIN:
+    EMBED_DIM: 96
+    DEPTHS: [2, 2, 6, 2]
+    NUM_HEADS: [3, 6, 12, 24]
+    WINDOW_SIZE: 7
+    APE: False
+    DROP_PATH_RATE: 0.3
+    PATCH_NORM: True
+  WEIGHTS: "/home/lorenzo/git/rsl_panoptic_seg/panoptic_models/panoptic_models/mask2former/models/mask2former_proj_heads/swin_t/model_0024999.pth"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]

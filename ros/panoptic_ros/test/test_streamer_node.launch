@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="panoptic_ros" type="test_stream_node.py" name="test_node" output="screen"/>
+</launch>

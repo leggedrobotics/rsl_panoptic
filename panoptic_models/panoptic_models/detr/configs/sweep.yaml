@@ -1,0 +1,45 @@
+program: main.py
+method: bayes
+metric:
+  goal: maximize
+  name: test_PQ_all.pq
+parameters:
+  lr:
+    values: [1e-3, 1e-4]
+  weight_decay:
+    values: [1e-3, 1e-4, 1e-5]
+  resume:
+    values: ["/home/lorenzo/git/rsl_panoptic_seg/deploy/panoptic_models/outputs/detr/detr_detr_100_mask_construction_0_epoch_500.pth",
+             "/home/lorenzo/git/rsl_panoptic_seg/deploy/panoptic_models/outputs/detr/detr_detr_50_mask_construction_0_epoch_500.pth"]
+
+early_terminate:
+  type: hyperband
+  s: 2
+  eta: 3
+  max_iter: 27
+
+command:
+  - /home/lorenzo/anaconda3/envs/rsl_panoptic_seg/bin/python
+  - /home/lorenzo/git/rsl_panoptic_seg/deploy/panoptic_models/panoptic_models/detr/main.py
+  - --batch_size
+  - 3
+  - --epochs
+  - 750
+  - --save_epochs
+  - 50
+  - --validation_epochs
+  - 25
+  - --output_dir
+  - /home/lorenzo/git/rsl_panoptic_seg/deploy/panoptic_models/outputs/detr
+  - --device
+  - cuda
+  - --masks
+  - --rewire
+  - --dataset_file
+  - "coco_reduced,construction_site"
+  - --val_dataset_file
+  - "construction_site"
+  - --num_samples
+  - "0,0"
+  - --wandb
+  - ${args}
