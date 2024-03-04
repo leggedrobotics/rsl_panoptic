@@ -43,7 +43,7 @@ pip install timm
 pip install scikit-learn
 ./rsl_panoptic/panoptic_models/panoptic_models/mask2former/third_party/Mask2Former/mask2former/modeling/pixel_decoder/ops/make.sh
 
-### Build docker Image
+### Seup with Docker
 
 For building the docker image execute:
 ```bash
@@ -54,14 +54,6 @@ To run the container and mount it on your home:
 docker run --gpus all -it -e HOST_USERNAME=$(whoami) -e HOST_UID=$(id -u) -e HOST_GID=$(id -g) -v /home/$(whoami):/home/$(whoami) rsl_panoptic_seg
 ```
 
-### Running the Docker Image
-
-For running the docker image we recommend the usage of the run.sh script from this [repository](https://github.com/leggedrobotics/m545_docker).
-
-After building the image (or pulling it from docker hub), this can be done by typing
-```bash
-./bin/run.sh --type=gpu --tag=panoptic
-```
 ## Deploying
 
 ### Download the pretrained model 
