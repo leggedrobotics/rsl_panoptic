@@ -2,7 +2,41 @@
 
 This package is for deploying the panoptic segmentation developed by the Robotics Systems Lab.
 
-## Docker
+## Panoptic Models 
+
+This section encompasses our efforts in developing state-of-the-art panoptic segmentation models using a supervised learning approache. The models are designed to understand and segment images into meaningful parts, combining both object detection and semantic segmentation tasks to provide a comprehensive view of an image's content.
+
+### Panoptic Segmentation
+
+Our approach utilizes DETR and Mask2Former framework, aiming to generate hierarchical feature embeddings for panoptic segmentation. The models are trained on selected subsets of the COCO Dataset and a specially curated Test Construction Site Dataset, demonstrating their effectiveness in diverse environments. For detailed instructions on training and inference, refer to the [Mask2Former README](panoptic_models/panoptic_models/mask2former/README.md) and the [DETR README](panoptic_model/panoptic_models/detr/README.md) 
+
+Key Highlights:
+- Utilization of COCO Dataset and Construction site data for robust training.
+- Employment of Mask2Former framework for accurate segmentation results.
+- Sample visualizations of segmentation predictions available for reference.
+
+For more details on datasets and model architecture, please see the specific README.md in the utils subfolder and the self_sup_seg/m2f_deploy directory.
+
+## Panoptic Ros 
+
+Integrating advanced panoptic segmentation capabilities with ROS (Robot Operating System), the Panoptic Ros project provides real-time image segmentation through a dedicated ROS node. It supports various models like DETR and Mask2Former, allowing seamless integration into robotics applications for enhanced environmental understanding.
+
+### ROS Panoptic Segmentation Node
+
+Key Features:
+- Easy integration with ROS for image topic subscription and segmented image publishing.
+- Support for multiple segmentation models with configurable ROS parameters.
+- Real-time visualization options for segmentation results and labels within the ROS environment.
+
+Installation and Launch:
+- Docker container recommended for ease of setup; alternatively, dependencies are listed in the official DETR and Mask2Former repos.
+- Launch the node using roslaunch command: `roslaunch panoptic_ros image_segmentation.launch`.
+
+Parameters and Customization:
+- Various parameters allow for customization of input topics, model selection, and visualization preferences.
+- Extendability by implementing additional models and adjusting image processing steps to meet specific needs.
+
+## Setup with Docker
 
 pip install pandas
 pip install tensorflow --upgrade
@@ -81,7 +115,6 @@ It can then be launched using
 ```bash
 roslaunch panoptic_ros image_segmentation.launch
 ```
-
 
 ----------------------------------------------------
 
