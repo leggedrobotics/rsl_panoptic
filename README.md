@@ -54,7 +54,7 @@ To run the container and mount it on your home:
 docker run --gpus all -it -e HOST_USERNAME=$(whoami) -e HOST_UID=$(id -u) -e HOST_GID=$(id -g) -v /home/$(whoami):/home/$(whoami) rsl_panoptic_seg
 ```
 
-## Deploying
+## Deploying with ROS
 
 ### Download the pretrained model 
 
