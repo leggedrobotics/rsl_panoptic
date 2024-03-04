@@ -7,10 +7,8 @@ python3 mask2former/m2f_deploy/m2f_train.py --config-file=mask2former/models/mas
     --wb-project: Project name for Weights and Biases (default: ssl_pan_seg).
     --wb-entity: Entity name for Weights and Biases (default: rsl_ssl_pan_seh).
     --wb-name: Run name for Weights and Biases. Optional, no default.
-    --mae-pretrain: Path to the Masked Autoencoder (MAE) pretrained model. Optional, no default.
     --output-dir: Output directory for checkpoints and log data (default: output/default).
     --dataset: Path to the dataset. If unspecified, COCO_DST and SEGMENT_DST from config/params.py are used (default: data/dataset_v8).
-    --caterpillar: Path to the caterpillar dataset for evaluation. Optional, no default.
 
 The default values for each parameter are already set up properly for a standard training procedure.
 
