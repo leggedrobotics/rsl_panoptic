@@ -15,8 +15,6 @@ Key Highlights:
 - Employment of Mask2Former framework for accurate segmentation results.
 - Sample visualizations of segmentation predictions available for reference.
 
-For more details on datasets and model architecture, please see the specific README.md in the utils subfolder and the self_sup_seg/m2f_deploy directory.
-
 ## Panoptic Ros 
 
 Integrating advanced panoptic segmentation capabilities with ROS (Robot Operating System), the Panoptic Ros project provides real-time image segmentation through a dedicated ROS node. It supports various models like DETR and Mask2Former, allowing seamless integration into robotics applications for enhanced environmental understanding.
