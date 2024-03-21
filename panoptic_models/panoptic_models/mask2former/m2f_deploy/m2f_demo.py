@@ -29,10 +29,12 @@ from panoptic_models.mask2former.third_party.Mask2Former.mask2former import (
 from panoptic_models.mask2former.third_party.Mask2Former.demo.predictor import (
     VisualizationDemo,
 )
+import sys
+print(sys.path)
 
 # register datasets
+from panoptic_models.config.params_data import COCO_DST, SEGMENTS_DST
 from panoptic_models.data.register_datasets import DatasetRegister
-from panoptic_models.panoptic_models.config.params_data import COCO_DST, SEGMENTS_DST
 
 # constants
 WINDOW_NAME = "mask2former demo"

@@ -8,9 +8,9 @@ import numpy as np
 # import local scripts
 from detectron2.data.datasets import register_coco_panoptic
 from detectron2.data import MetadataCatalog, DatasetCatalog
-
+import panoptic_models.config.params_data as params_data
 # import parameters
-from panoptic_models.panoptic_models.config.params_data import (
+from panoptic_models.config.params_data import (
     COCO_DST,
     SEGMENTS_DST,
     COCO_M2F_ORIGINAL_PERFORMANCE_EVAL,

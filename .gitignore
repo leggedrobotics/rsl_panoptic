@@ -63,6 +63,7 @@ panoptic_models/panoptic_models/deeplab2/weights/
 panoptic_models/panoptic_models/detr/weights/
 panoptic_models/panoptic_models/detr/configs/wandb
 panoptic_models/panoptic_models/mask2former/weights/
+panoptic_models/panoptic_models/mask2former/**/*.pth
 panoptic_models/datasets/
 panoptic_models/outputs/
 panoptic_models/logs/
