@@ -1,8 +1,8 @@
 # M545 Panoptic Segmentation
 
 This package is for deploying the panoptic segmentation developed by the Robotics Systems Lab.
-![frame025833_rotated](https://github.com/leggedrobotics/rsl_panoptic/assets/15898282/a9d77558-02a1-49ba-849e-532573fd5cdc)
-![image_0002](https://github.com/leggedrobotics/rsl_panoptic/assets/15898282/1b165512-e324-4993-be34-18c6e660c8fb)
+
+<img src="https://github.com/leggedrobotics/rsl_panoptic/assets/15898282/a9d77558-02a1-49ba-849e-532573fd5cdc" alt="frame025833_rotated" style="width: 50%;"/><img src="https://github.com/leggedrobotics/rsl_panoptic/assets/15898282/1b165512-e324-4993-be34-18c6e660c8fb" alt="image_0002" style="width: 50%;"/>
 
 
 
