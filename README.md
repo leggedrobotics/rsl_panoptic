@@ -8,7 +8,7 @@ This section encompasses our efforts in developing state-of-the-art panoptic seg
 
 ### Panoptic Segmentation
 
-Our approach utilizes DETR and Mask2Former framework, aiming to generate hierarchical feature embeddings for panoptic segmentation. The models are trained on selected subsets of the COCO Dataset and a specially curated Test Construction Site Dataset, demonstrating their effectiveness in diverse environments. For detailed instructions on training and inference, refer to the [Mask2Former README](panoptic_models/panoptic_models/mask2former/README.md) and the [DETR README](panoptic_model/panoptic_models/detr/README.md) 
+Our approach utilizes DETR and Mask2Former framework, aiming to generate hierarchical feature embeddings for panoptic segmentation. The models are trained on selected subsets of the COCO Dataset and a specially curated Test Construction Site Dataset, demonstrating their effectiveness in diverse environments. For detailed informations about the training data setup check [dataset README](panoptic_models/data/README.md). For detailed instructions on training and inference, refer to the [Mask2Former README](panoptic_models/panoptic_models/mask2former/README.md) and the [DETR README](panoptic_model/panoptic_models/detr/README.md) 
 
 Key Highlights:
 - Utilization of COCO Dataset and Construction site data for robust training.

@@ -16,11 +16,6 @@ The default values for each parameter are already set up properly for a standard
 
 To run inference with Mask2Former, execute:
 ```bash
-<<<<<<< HEAD
-python3 panoptic_models/mask2former/m2f_deploy/m2f_demo.py --config-file=panoptic_models/mask2former/models/mask2former_proj_heads/swin_t/maskformer2_swin_tiny_bs16_50ep.yaml --input_folder=<path_to_folder_with_images> --output=<output_folder_path>
-```
-=======
 
 python3 panoptic_models/m2f_deploy/m2f_demo.py --config-file=panoptic_models/models/mask2former_proj_heads/swin_t/maskformer2_swin_tiny_bs16_50ep.yaml --input_folder=<path_to_folder_with_images> --output=<output_folder_path>
 ```
->>>>>>> 704e4d0a3f675963ca15e818624f80d8ea6b73bd
